@@ -3,6 +3,10 @@ var router = express.Router();
 var passport = require("passport");
 var request = require("request");
 
+router.get("/", function(req, res) {
+    res.render('prefform');
+})
+
 router.get("/getAuthToken", function(req, res) {
     var options = { method: 'POST',
     url: 'https://outpost.mapmyindia.com/api/security/oauth/token',

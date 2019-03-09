@@ -8,8 +8,6 @@ router.get("/register",function(req,res){
 });
 //user sign up
 router.post("/register", function(req,res){
-    /* req.body.username
-    req.body.password */
     User.register(new User({username:req.body.username}),req.body.password,function(err,user){
         if(err){
             console.log(err);

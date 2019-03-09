@@ -8,6 +8,7 @@ var express               =require("express"),
     passportLocalMongoose =require("passport-local-mongoose");
 
 const authRoutes = require("./routes/auth");
+const mapRoutes = require("./routes/map");
 
 mongoose.connect("mongodb+srv://Vedaant:vedaant123@cluster0-yunv0.mongodb.net/test?retryWrites=true");
 app.use(require("express-session")({
@@ -30,6 +31,7 @@ passport.deserializeUser(User.deserializeUser());
 ///================
 
 app.use("/auth", authRoutes);
+app.use("/map", mapRoutes);
 
 app.get("/secret",isLoggedIn ,function(req,res){
     res.render("secret");

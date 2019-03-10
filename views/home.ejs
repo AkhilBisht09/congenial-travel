@@ -1,15 +1,14 @@
 <% include ./partials/header %>
-<nav class="nav">
+<nav class="nav" style="z-index: 990">
     <div class="container">
         <div class="logo">
-            <a href="#">Your Logo</a>
+            <a href="#">TRIPZY</a>
         </div>
         <div id="mainListDiv" class="main_list">
             <ul class="navlinks">
                 <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/auth/login">Log In</a></li>
             </ul>
         </div>
         <span class="navTrigger">
@@ -20,16 +19,36 @@
     </div>
 </nav>
 
+
+
 <section class="home">
+    <div style="padding-top: 2.5em;">
+        <form class="sign-up" action="/auth/register" method="POST" style="z-index: auto">
+            <h1 class="sign-up-title">Don't have an account?</h1>
+            <h1 class="sign-up-title">Create a <span style="color: chartreuse">TRIPZY</span> account Now</h1>
+            <input type="text" class="sign-up-input" name="username" placeholder="What's your username?" autofocus>
+            <input type="password" class="sign-up-input" name="password" placeholder="Choose a password">
+            <input type="submit" value="Sign me up!" class="sign-up-button">
+            <br><br><br>
+            <h2 class="sign-up-title">Already Have an account?</h2>
+            <a href="/auth/login">
+                <span class="ui animated button primary" tabindex="0" style="margin-left:11.8em">
+
+                    <span class="visible content">Login</span>
+                    <div class="hidden content">
+                        <i class="right arrow icon"></i>
+                    </div>
+                </span>
+            </a>
+
+
+
+        </form>
+    </div>
 </section>
-<div style="height: 1000px">
+<div style="height: 100px">
     <!-- just to make scrolling effect possible -->
-    <h2 class="myH2">What is this ?</h2>
-    <p class="myP">This is a responsive fixed navbar animated on scroll</p>
-    <p class="myP">I took inspiration from ABDO STEIF (<a href="https://codepen.io/abdosteif/pen/bRoyMb?editors=1100">https://codepen.io/abdosteif/pen/bRoyMb?editors=1100</a>)
-        and Dicson <a href="https://codepen.io/dicson/pen/waKPgQ">(https://codepen.io/dicson/pen/waKPgQ)</a></p>
-    <p class="myP">I HOPE YOU FIND THIS USEFULL</p>
-    <p class="myP">Albi</p>
+    <br />
     <p class="myP">
 
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint

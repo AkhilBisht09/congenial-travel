@@ -28,23 +28,6 @@
 			flex-direction: row;
 			color: #006400;
 		}
-		#login{
-			margin-top:15px;
-			margin-right:10px;
-			float: right;
-			font-size: 24px;
-			display: flex;
-			flex-direction: row;
-			color: #006400;
-			border:1px solid #006400;
-			border-radius: 10px;
-			padding:5px;
-      transition-duration: 1s;
-
-		}
-    #login:hover{
-      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
-    }
 		
 .loginWith{
   position: absolute;;

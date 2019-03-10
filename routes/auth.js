@@ -1,11 +1,13 @@
 var express = require("express");
 var router = express.Router();
 var passport = require("passport");
+var User = require('../models/user');
 
 //show sign up form
 router.get("/register",function(req,res){
     res.render("register");
 });
+
 //user sign up
 router.post("/register", function(req,res){
     User.register(new User({username:req.body.username}),req.body.password,function(err,user){
@@ -15,7 +17,7 @@ router.post("/register", function(req,res){
 
         }
         passport.authenticate("local")(req,res,function(){
-            res.redirect("/secret");
+            res.render("dashboard");
         });
     });
 });
